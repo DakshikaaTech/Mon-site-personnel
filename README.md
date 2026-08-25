@@ -8,4 +8,5 @@ This is the cover for my webpage.
 
 As you scroll down, you can see more facts about me. I have also added a top taskbar for easier navigation.
 You can try out my website [here](https://dakshikaatech.github.io/Mon-site-personnel/)
-Hope you like my website!
+
+Hope you like it!
