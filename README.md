@@ -14,6 +14,6 @@ Some features include:
 - "About Me" section where I describe who I am in a few sentences
 - "Innovations" section to show off my projects
 - "Hobbies" sections gives you a glimpse of how I spend my leisure time
-- - Contact information with dedicated buttons to get in touch with me! (P.S. I'd luv to do collabs)
+- Contact information with dedicated buttons to get in touch with me! (P.S. I'd luv to do collabs)
 
 Hope you like it! :D
