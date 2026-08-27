@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF=8">
@@ -25,14 +25,28 @@
             scroll-behavior: smooth;
         }
 
+        body.light-mode {
+            --primary: #f8fafc;
+            --accent: #0284c7;
+            --accent-hover: #0369a1;
+            --bg: #ffffff;
+            --card-bg: #f1f5f9;
+            --text: #0f172a;          
+            --light-text: #475569;    
+            --border: #cbd5e1;
+            --hero-bg: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text);
-            line-height: 1,6;
+            line-height: 1.6;
             transition: background-color 0.3s, color 0.3s;
             overflow-x: hidden;
         }
+
+        
 
         header{
             position: fixed;
@@ -74,7 +88,7 @@
             color: var(--accent);
         }
 
-        .hero{
+        .hero {
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -82,7 +96,7 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)
+            background: var(--hero-bg);
         }
 
         .hero h1{
@@ -172,6 +186,26 @@
             margin-bottom: 8px;
         }
 
+        .card-image {
+            width: 100%;
+            height: 160px;
+            background-color: var(--border);
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-text);
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }   
+
         .contact-links{
             display: flex;
             gap: 15px;
@@ -209,6 +243,7 @@
             <a href="#innovations">Innovations</a>
             <a href="#hobbies">Hobbies</a>
             <a href="#contact">Contact</a>
+            <button id="theme-toggle" class="contact-btn" style="padding: 6px 12px; cursor: pointer;">☀️ Light</button>
         </nav>
     </header>
 
@@ -229,14 +264,23 @@
         <h2>Innovations & Projects</h2>
         <div class="grid-container">
             <div class="card">
+                <div class="card-image">
+                    <img src="robot.jpg" alt="Autonomous Bipedal Robot">
+                </div>
                 <h3>Autonomous Bipedal Robot</h3>
                 <p>Designed, calibrated and programmed a web-controlled bipedal robot using servo motors, ultrasonic sensors and ESP-32 microcontroller.</p>
             </div>
             <div class="card">
+                <div class="card-image">
+                    <img src="final-bot.png" alt="Celestial ChatBot">
+                </div>
                 <h3>Custom Workspace Bot</h3>
                 <p>Developed an interactive Node.js application utilizinf external APIs for dynamic data fetching, automated responses, and streamlined utilities. It was made on Slack platform for HackClub.</p>
             </div>
             <div class="card">
+                <div class="card-image">
+                    <img src="Game demo.gif" alt="Make it safely back to Earth">
+                </div>
                 <h3>Beyond the Nebula game</h3>
                 <p>Created a space-themed warioware game using Godot Engine and gdScript.</p>
             </div>
@@ -248,37 +292,61 @@
     
         <div class="grid-container">
             <div class="card">
+                <div class="card-image">
+                    <img src="chess.jfif" alt="Chessboard">
+                </div>
                 <h3>Chess</h3>
                 <p>Playing chess to enhance strategic thinking and problem-solving skills.</p>
             </div>
             <div class="card">
+                <div class="card-image">
+                    <img src="cube.jpg" alt="Flaunting my Rubik's cubes">
+                </div>
                 <h3>Speedcubing</h3>
                 <p>Practicing advanced solving methods and working through complex algorithms to push solving speeds further</p>
             </div>
             <div class="card">
+                <div class="card-image">
+                    <img src="aero.jpg" alt="Built the Diamondback Alpha">
+                </div>
                 <h3>Aero & Design</h3>
                 <p>Experimenting with paper aircraft aerodynamics, flight physics and structural paper engineering.</p>
             </div>
             <div class="card">
+                <div class="card-image">
+                    <img src="Je suis___.jfif" alt="J'aime la langue francais">
+                </div>
                 <h3>Languages & Culture</h3>
                 <p>A2 level in French and B2 level in English. Aiming for C1 level in English.</p>
             </div>
             <div class="card">
+                <div class="card-image">
+                    <img src="Reading.jpg" alt="Reading by the Ocean">
+                </div>
                 <h3>Reading</h3>
                 <p>Enjoying a variety of books, from science fiction to biographies, to expand knowledge and imagination.</p>
             </div>
        
             <div class="card">
+                <div class="card-image">
+                    <img src="Horsehead Nebula.jpg" alt="#Stargazing">
+                </div>
                 <h3>Space Exploration</h3>
-                <p>Keeping up with the latest advancements in space technology and exploration missions.</p>
+                <p>Keeping up with the latest advancements in space technology and exploration missions. To infinity and beyond!</p>
             </div>
             <div class="card">
+                <div class="card-image">
+                    <img src="NYC.jpg" alt="The Big Apple a.k.a The City That Never Sleeps">
+                </div>
                 <h3>Photography</h3>
                 <p>Capturing moments and landscapes that inspire creativity and reflection.</p>
             </div>
             <div class="card">
-                <h3>Music</h3>
-                <p>Listening to a wide range of music genres, from classical to electronic. I'm a huge fam of Ed Sheeran btw.</p>
+                <div class="card-image">
+                    <img src="MJ.jpg" alt="Moonwalking like the King of Pop">
+                </div>
+                <h3>Dance</h3>
+                <p>I like to dance the night away!</p>
             </div>
         </div>
     </section>
@@ -293,5 +361,37 @@
             <a href="https://lichess.org/smd_winner" target="_blank" class="contact-btn">♟️ Lichess</a>
         </div>
     </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        if (!themeToggleBtn) return;
+
+        // Check saved preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggleBtn.textContent = '☀️ Light'; // If it's light mode, show button to switch to light/sun
+        } else {
+            themeToggleBtn.textContent = '🌙 Dark';  // If it's dark mode, show moon icon to switch to dark
+        }
+
+        // Toggle action
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+                themeToggleBtn.textContent = '☀️ Light';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeToggleBtn.textContent = '🌙 Dark';
+            }
+        });
+    });
+    </script>
 </body>
 </html>
+
